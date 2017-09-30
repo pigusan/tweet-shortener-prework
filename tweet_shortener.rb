@@ -16,7 +16,7 @@ end
 
 def word_substituter(tweet)
   new_array = []
-  tweet.split(' ').each do |word|
+  tweet.split(' ').each do |word| #could have used collect here instead of each
     if dictionary.keys.include?(word.downcase)
       word = dictionary[word.downcase]
       new_array << word
